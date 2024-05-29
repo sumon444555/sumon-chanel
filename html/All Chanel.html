@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Channels</title>
+    <link rel="stylesheet" href="styles.css">
+<style>body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}
+
+.logo h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+.channel-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.channel-item {
+    margin: 1rem;
+    text-align: center;
+}
+
+.channel-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 1rem;
+}
+
+form input, form textarea {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+form button {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+</style>
+<script>document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('nav ul li a');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetSection = document.querySelector(e.target.getAttribute('href'));
+            window.scrollTo({
+                top: targetSection.offsetTop,
+                behavior: 'smooth'
+            });
+        });
+    });
+});
+</script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Sumon Chanels</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#channels">Channels</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="home-section"><marquee bgcolor=green behavior=alternate> Hi.welcom our websit .ধন্যবাদ আমাদের এই website এ আসার জন্য। আপনি আমাদের Chanel এ সন্তষ্ট হোলে আপনাদের বন্ধুদের  কাছে Shear করে দিবেন।</marquee>
+            <h2>Welcome to All Channels</h2>
+            <p>Your one-stop destination for all your favorite channels.</p>
+        </section>
+
+        <section id="channels" class="channels-section">
+            <h2>Our Channels</h2>
+            <div class="channel-list">
+                <div class="channel-item">
+                    <img src="file:///C:/Users/User/Desktop/sumon/my%20stor/dfg.png" alt="Channel 1">
+                    <li><a href="https://www.toffeelive.com/home">chanl 1</a></li>
+                </div>
+                <div class="channel-item">
+                    <img src="file:///C:/Users/User/Desktop/sumon/my%20stor/jdfjh.png" alt="Channel 2">
+                   <li> <a href="https://www.channelionline.com/live-tv/">chanel 2</a></li>
+          </div>
+             <div class="channel-item">
+                   <img src="file:///C:/Users/User/Desktop/sumon/my%20stor/bhnn.png"alt="Chanel 3">
+                   <li> <a href="https://maasranga.tv/">chanel 3</a>
+</li>
+       </div>`
+            <div class="channel-item">
+                    <img src="file:///C:/Users/User/Desktop/sumon/my%20stor/hdhf.png"alt="chanel 4">
+                   <li><a href="https://www.rtvonline.com/live">chanel 4</a></li>
+   </div>
+                <!-- Add more channel items as needed -->
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2>About Us</h2>
+            <p>Learn more about All Channels and our mission to provide the best viewing experience.</p>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 All Channels. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
